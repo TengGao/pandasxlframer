@@ -3,13 +3,9 @@ from setuptools import setup, find_packages
 with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
-about = {}
-with open("xlsxpandasformatter/_version.py", encoding="utf-8") as f:
-    exec(f.read(), about)
-
 setup(
     name="PandasXlFramer",
-    version=about["__version__"],
+    version="0.1",
     description="PandasXlFramer",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -18,6 +14,8 @@ setup(
     author_email="tenggao@gmail.com",
     license="MIT",
     packages=find_packages(),
+    include_package_data=True,
+    package_data={"": ['data/*.xlsx',"data/image/*.png","data/output/*.csv","data/output/*.xlsx"]},
     zip_safe=False,
     python_requires=">=3.6",
     install_requires=["pandas", "openpyxl", "matplotlib", "numpy", "pandas-flavor"],
