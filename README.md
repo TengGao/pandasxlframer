@@ -5,6 +5,8 @@ For example the default Pandas' to_excel output a file like this:
 <img src="data/image/default_output.png">
 A task that we often encounter is to add a header to this Excel file, merge some column cells, formatting cells, and to change background color. This can be accomplish by the following codes:<br>
 ```\python
+int_map = {"全量": "int", "S+": "int", "S": "int", "A": "int", "B": "int", "无级别": "int"}
+path = "../data/output/test.xlsx"
 (
     df.excel_format.add_header(title_text="兴趣点为空统计总览")
     .set_columns_format(int_map)
@@ -31,4 +33,4 @@ The current supported functionalities are:
 ### To Do
 - add more cell coloring options;
 - add more alignment options;
-- 
+- add examples of how to write multiple dataframe and multiple sheets.
