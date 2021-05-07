@@ -44,7 +44,9 @@ def set_font_format(
     fgColor = "C0C0C0" if fill_bgcolor is None else fill_bgcolor
     line = Side(style="thin", color="000000")  # set thin border
     border = Border(top=line, bottom=line, left=line, right=line)
-    font = Font(default_font_style, size=font_size, bold=bold, italic=italic, color=font_color)
+    font = Font(
+        default_font_style, size=font_size, bold=bold, italic=italic, color=font_color
+    )
     fill = PatternFill("solid", fgColor=fgColor)
     alignment = Alignment(
         horizontal=font_horizontal, vertical="center", wrapText=True
@@ -182,7 +184,7 @@ class Framer:
     def column_width(self, col_name, col_width):
         col_idx = self._get_column_index(col_name)
         col_letter = get_column_letter(col_idx)
-        self.worksheet.column_dimensions[col_letter].width = width
+        self.worksheet.column_dimensions[col_letter].width = col_width
         return self
 
     def set_column_width(self, col_map):

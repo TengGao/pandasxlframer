@@ -35,6 +35,5 @@ setup(
     project_urls={
         "Repository": "https://github.com/TengGao/pandasxlframer",
         "Bug Reports": "https://github.com/TengGao/pandasxlframer/issues",
-#         "Documentation": "https://github.com/webermarcolivier/xlsxpandasformatter/blob/master/README.md",
     }
 )
