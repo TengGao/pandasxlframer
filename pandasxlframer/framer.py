@@ -118,6 +118,7 @@ class Framer:
         bold=True,
         fill_bgcolor=None,
         fill_border=False,
+        header_name = 'header',
     ):
         max_col_letter = get_column_letter(self.max_col)
         self.worksheet.merge_cells(f"A1:{max_col_letter}1")
@@ -127,7 +128,7 @@ class Framer:
         header_cell.style = set_font_format(
             font_size=font_size,
             bold=bold,
-            style_name="header",
+            style_name=header_name,
             fill_border=fill_border,
             fill_bgcolor=fill_bgcolor,
         )
